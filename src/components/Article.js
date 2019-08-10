@@ -5,12 +5,6 @@ class Article extends PureComponent {
     console.log('componentWillMount')
   }
 
-  // componentWillReceiveProps(nextProps, nextContext) {
-  //   console.log('componentWillReceiveProps')
-  //   if (nextProps.defaultOpen !== this.props.defaultOpen) {
-  //   }
-  // }
-
   componentWillUpdate(nextProps, nextState, nextContext) {
     console.log('componentWillUpdate')
   }
@@ -39,12 +33,6 @@ class Article extends PureComponent {
         </div>
     )
   }
-
-  // handleClick = () => {
-  //   this.setState({
-  //     isOpen: !this.state.isOpen
-  //   })
-  // }
 }
 
 
