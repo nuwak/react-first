@@ -1,17 +1,22 @@
 import React, {PureComponent} from 'react'
 
 class Article extends PureComponent {
-  componentWillMount() {
-    console.log('componentWillMount')
+  state = {
+    someState: false
   }
 
-  componentWillUpdate(nextProps, nextState, nextContext) {
-    console.log('componentWillUpdate')
+  constructor(props) {
+    super(props)
+    console.log('old method named componentWillMount')
+  }
+
+  static getDerivedStateFromProps(props, states) {
+    console.log('getDerivedStateFromProps')
+    return {}
   }
 
   render() {
     const {article, isOpen, onButtonClick} = this.props
-    console.log(this.props)
     const body = this.props.isOpen && <section className="card-text">{article.text}</section>
 
     return (
