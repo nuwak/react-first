@@ -3,6 +3,7 @@ import React, {PureComponent} from 'react'
 class Article extends PureComponent {
 
   state = {
+    isOpen: false
   }
 
   componentWillMount() {
